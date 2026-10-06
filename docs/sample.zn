@@ -1,0 +1,24 @@
+fn fibonacci(n: i64) -> i64 {
+    var a: i64 = 0;
+    var b: i64 = 1;
+    var i: i64 = 0;
+    var next: i64 = 0;
+
+    loop {
+        if (i >= n) break;
+
+        next = a + b;
+        a = b;
+        b = next;
+        i += 1;
+    }
+
+    return a;
+}
+
+fn main() {
+    var n: i64 = 10;
+    var result: i64 = fibonacci(n);
+
+    print("fib({n}) = {result}");
+}
